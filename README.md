@@ -3,7 +3,7 @@ This is the code for experiments in the paper "[Maximum Entropy Model Correction
 
 **Note:** Some algorithm names and the definition of $\beta$ differ from the paper. We have $\beta_\text{code} = 4/\beta^2_\text{paper}$.
 
-**Acknowledgement**: Some of the code is originally from [here]("https://github.com/awwang10/osvi"), which is developed by Andrew Wang and Amin Rakhsha
+**Acknowledgement**: Some of the code is originally from [here](https://github.com/awwang10/osvi), which is developed by Andrew Wang and Amin Rakhsha.
 
 ## To reproduce all the plots
 Simply run the scripts in bash:
