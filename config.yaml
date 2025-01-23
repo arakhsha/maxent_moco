@@ -1,0 +1,99 @@
+############ Environment ############
+env: "cliffwalk"   # garnet / maze33 / cliffwalk
+discount: 0.9
+
+## garnet
+garnet_problem_num_states:  36
+garnet_problem_num_actions:  6
+garnet_problem_branching_factor:  12
+garnet_problem_non_zero_rewards: 12
+garnet_mdp_seed: 0
+
+## maze33
+maze33_success_prob: 0.9
+
+## cliffwalk
+cliffwalk_success_prob: 0.9
+
+############ Experiments ############
+
+
+## Exp PE Exact
+exp_pe_exact_num_iterations: 15
+exp_pe_exact_alphas: [0.1, 0.5, 1]
+exp_pe_exact_alphas_sensitivity: 0.02
+exp_pe_exact_model_type: LocallySmoothed # LocallySmoothed, IdentitySmoothed
+
+## Exp Control Exact
+exp_control_exact_num_iterations: 15
+exp_control_exact_alphas: [0.1, 0.5, 1]
+exp_control_exact_alphas_sensitivity: 0.02
+exp_control_exact_model_type: LocallySmoothed # LocallySmoothed, IdentitySmoothed
+
+
+## Exp PE Samples
+exp_pe_sample_num_iterations: 10000
+exp_pe_sample_alphas: [0.1, 0.5, 1]
+exp_pe_sample_model_type: LocallySmoothed # LocallySmoothed
+
+exp_pe_lr_type: "ConstantAndDelay" #RescaledLinear, ConstantAndDelay
+exp_pe_td_learning_pe_lr: 0.2
+exp_pe_td_gamma: 0.999
+exp_pe_td_learning_pe_delay: 10000
+
+exp_pe_msdyna_lr: [0.05, 0.05, 0.05]
+exp_pe_msdyna_gamma: [0.995, 0.995, 0.995]
+exp_pe_msdyna_lr_delay: 10000
+
+exp_pe_mecdyna1_beta: [10000, 10000, 10000]
+exp_pe_mecdyna1_planning_interval: [100, 100, 100]
+exp_pe_mecdyna1_val_queue_interval: [250, 400, 750]
+exp_pe_mecdyna1_num_unused_V: [2, 2, 2]
+
+exp_pe_mecdyna2_beta: [15000, 15000, 15000]
+exp_pe_mecdyna2_planning_interval: [100, 100, 100]
+exp_pe_mecdyna2_val_queue_interval: [300, 300, 400]
+exp_pe_mecdyna2_num_unused_V: [2, 2, 2]
+
+exp_pe_mecdyna3_beta: [20000, 20000, 20000]
+exp_pe_mecdyna3_planning_interval: [100, 100, 100]
+exp_pe_mecdyna3_val_queue_interval: [300, 300, 400]
+exp_pe_mecdyna3_num_unused_V: [2, 2, 2]
+
+
+
+## Exp Control Samples
+exp_control_sample_num_iterations: 150000
+exp_control_sample_alphas: [0.1, 0.5, 1]
+exp_control_sample_model_type: LocallySmoothed # LocallySmoothed
+
+exp_control_lr_type: "ConstantAndDelay" #RescaledLinear, ConstantAndDelay
+exp_control_qlearning_lr: 0.02
+exp_control_qlearning_delay: 68000
+exp_control_qlearning_gamma: 0.9999
+
+exp_control_dyna_planning_interval: [2000, 2000, 2000]
+
+exp_control_msdyna_lr: [0.02, 0.02, 0.02]
+exp_control_msdyna_delays: [35000, 50000, 80000]
+exp_control_msdyna_gamma: [0.9, 0.9, 0.9995]
+
+exp_control_mecdyna1_beta: [10000, 10000, 10000]
+exp_control_mecdyna1_planning_interval: [2000, 2000, 2000]
+exp_control_mecdyna1_val_queue_interval: [10000, 10000, 10000]
+exp_control_mecdyna1_num_unused_V: [2, 2, 2]
+
+exp_control_mecdyna2_beta: [15000, 15000, 15000]
+exp_control_mecdyna2_planning_interval: [2000, 2000, 2000]
+exp_control_mecdyna2_val_queue_interval: [6000, 6000, 6000]
+exp_control_mecdyna2_num_unused_V: [2, 2, 2]
+
+exp_control_mecdyna3_beta: [20000, 20000, 20000]
+exp_control_mecdyna3_planning_interval: [2000, 2000, 2000]
+exp_control_mecdyna3_val_queue_interval: [10000, 10000, 10000]
+exp_control_mecdyna3_num_unused_V: [2, 2, 2]
+
+exp_control_mecdyna4_beta: [500, 500, 2000]
+exp_control_mecdyna4_planning_interval: [2000, 2000, 2000]
+exp_control_mecdyna4_val_queue_interval: [10000, 10000, 10000]
+exp_control_mecdyna4_num_unused_V: [2, 2, 2]
